@@ -1,6 +1,16 @@
 (async () => {
+  interface Product {
+    id:          number;
+    title:       string;
+    price:       number;
+    description: string;
+    images:      string[];
+    creationAt:  Date;
+    updatedAt:   Date;
+    category:    object;
+  }
   const myCart = [];
-  const products = [];
+  const products: Array<Product> = [];
   const limit = 2;
 
   async function getProducts() {
@@ -13,11 +23,11 @@
   function getTotal() {
     let total = 0;
     for (let i = 0; i < products.length; i++) {
-      total += products[i].prize;
+      total += products[i].price;
     }
     return total;
   }
-  function addProduct(index) {
+  function addProduct(index: number) {
     if (getTotal() <= limit) {
       myCart.push(products[index]);
     }
