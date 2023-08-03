@@ -12,8 +12,8 @@
   console.log(produstList);
 
   const mixed: (number | string | boolean)[] = ['Hello', false];
-  mixed.push(100);
-  mixed.push('World');
+  mixed.push(100)
+  mixed.push('World')
   mixed.push(true);
   // mixed.push({ name: 'Juan' })
   console.log(mixed);
