@@ -15,4 +15,10 @@
 
   createProduct({ title: 'P1', createdAt: new Date(), stock: 12 })
   console.log(products)
+
+  // Otra forma de tipar
+  const login2 = ({ email, password }: { email: string, password: string }) => {
+    console.log(email, password)
+  }
+  login2({ email: 'XXXXXXXXXXXX', password: '214324324' })
 })();
