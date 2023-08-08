@@ -11,6 +11,7 @@
   const res = calTotal([1, 2, 3, 4, 5])
   console.log(res)
 
+  // las funciones que no retornan nada, su type es void
   const printTotal = (prices: number[]): void => {
     const res = calTotal(prices)
     console.log(`EL total es ${res} USD`)
